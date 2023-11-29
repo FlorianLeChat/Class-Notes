@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Author" content="Florian TRAYON" />
+		<meta name="description" content="Notes de cours de la LP IMApp."/>
+		<meta name="keywords" lang="fr" content="cours, html5, css3" />
+		<meta name="robots" content="noindex" />
+		<base target="_blank" />
+		<title>Chapitre 4</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- En-tête de la page -->
+		<header>
+			<a href="http://lp-imapp.unice.fr/">
+				<img src="../images/logo_imapp.png" alt="Logo de la formation"/>
+			</a>
+
+			<h1>~ Chapitre 4 ~</h1>
+			<p>
+				<em>Les balises les plus importantes.</em>
+			</p>
+
+			<ul class="liste bloc">
+				<li><a href="chapter_3.html">Chapitre précédent.</a></li>
+				<li><a href="chapter_5.html">Chapitre suivant.</a></li>
+				<li><a href="../index.html">Retour vers la page d'accueil.</a></li>
+			</ul>
+
+			<hr/>
+		</header>
+
+		<main>
+			<!-- Sommaire -->
+			<nav>
+				<h2>Sommaire de la page</h2>
+				<ul>
+					<li><strong><a href="#notes">I</a>-</strong> <em>Notes du chapitre</em></li>
+					<li><strong><a href="#exemples">II</a>-</strong> <em>Exemples et images du chapitre</em></li>
+				</ul>
+			</nav>
+
+			<hr />
+
+			<!-- Cours -->
+			<section>
+				<h2>Cours</h2>
+
+				<!-- Notes -->
+				<article>
+					<h3 id="notes">Notes</h3>
+
+					<ul>
+						<!-- <head> -->
+						<li>
+							La balise <code>&lt;head&gt;</code> fournit <strong>des informations générales sur le document</strong>,
+							incluant son titre et des liens ou des définitions vers des scripts
+							(<a href="https://fr.wikipedia.org/wiki/JavaScript">JavaScript</a>)
+							et feuilles de style (<a href="https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade">CSS</a>).
+						</li>
+
+						<!-- <link> -->
+						<li>
+							La balise <code>&lt;link&gt;</code> définit <strong>la relation entre le document actuelle
+							et une ressource externe</strong>. Cet élément peut être utilisé pour définir un lien vers une feuille de style,
+							vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
+						</li>
+
+						<!-- <meta> -->
+						<li>
+							La balise <code>&lt;meta&gt;</code> représente toute <strong>information de métadonnées</strong>, comme par exemple
+							<a href="https://fr.wikipedia.org/wiki/Codage_des_caract%C3%A8res#Historique_des_codages_de_caract%C3%A8res_fran%C3%A7ais">
+							l'encodage du site</a>, qui ne peut pas être représentée par un des éléments (base, link, script, style ou title).
+						</li>
+
+						<!-- <style> -->
+						<li>
+							La balise <code>&lt;style&gt;</code> contient des <strong>informations de mise en forme pour un document</strong>
+							ou une partie d'un document. Par défaut, les instructions de mise en forme écrites dans cet élément sont écrites en CSS.
+						</li>
+
+						<!-- <title> -->
+						<li>
+							La balise <code>&lt;title&gt;</code> définit <strong>le titre du document</strong>
+							(qui est affiché dans la barre de titre du navigateur ou dans l'onglet de la page).
+							Cet élément ne peut contenir <strong>que</strong> du texte, les balises qu'il contiendrait seraient ignorées.
+						</li>
+
+						<!-- <body> -->
+						<li>
+							La balise <code>&lt;body&gt;</code> représente le <strong>contenu principal du document HTML</strong>.
+							Il ne peut y avoir qu'un élément par document.
+						</li>
+
+						<!-- <article> -->
+						<li>
+							La balise <code>&lt;article&gt;</code> représente une <strong>composition autonome dans un document</strong>,
+							une page, une application ou un site, destinée à être distribuée ou réutilisée de manière indépendante.
+							<u>Exemples</u> : un message de forum, un article de magazine ou de journal, ou un article de blog, une fiche produit,
+							un commentaire soumis par un utilisateur, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.
+						</li>
+
+						<!-- <footer> -->
+						<li>
+							La balise <code>&lt;footer&gt;</code> représente le <strong>pied de page de la section ou de la racine de sectionnement
+							la plus proche</strong>. Cet élément contient habituellement des informations sur l'autrice ou l'auteur de la section,
+							les données relatives au droit d'auteur (<a href="https://fr.wikipedia.org/wiki/Copyright">copyright</a>)
+							ou les liens vers d'autres documents en relation.
+						</li>
+
+						<!-- <header> -->
+						<li>
+							La balise <code>&lt;header&gt;</code> représente un <strong>groupe de contenu introductif ou de contenu
+							aidant à la navigation</strong>. Il peut contenir des éléments de titre, mais aussi d'autres éléments tels qu'un logo,
+							<a href="https://developer.mozilla.org/fr/docs/Learn/Forms/Your_first_form">un formulaire de recherche</a>, etc.
+						</li>
+
+						<!-- <h1>, <h2>, <h3>, <h4>, <h5>, <h6> -->
+						<li>
+							Les balises <code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code> représentent <strong>six</strong> niveaux de titres dans un document,
+							<code>&lt;h1&gt;</code> est le <strong>plus important</strong> et <code>&lt;h6&gt;</code> est le <strong>moins important</strong>.
+							Un élément de titre décrit brièvement le sujet de la section qu'il introduit.
+						</li>
+
+						<!-- <main> -->
+						<li>
+							La balise <code>&lt;main&gt;</code> représente le <strong>contenu majoritaire du corps (<em>body</em>) du document</strong>.
+							Le contenu principal de la zone est constitué de contenu directement en relation,
+							ou qui étend le sujet principal du document ou de la fonctionnalité principale d'une application.
+						</li>
+
+						<!-- <nav> -->
+						<li>
+							La balise <code>&lt;nav&gt;</code> représente une <strong>section d'une page ayant des liens vers d'autres pages
+							ou des fragments de cette page</strong>. Autrement dit, c'est une section destinée à la navigation dans un document
+							(avec des menus, des tables des matières, des index, etc.).
+						</li>
+
+						<!-- <section> -->
+						<li>
+							La balise <code>&lt;section&gt;</code> représente une <strong>section générique</strong> d'un document,
+							par exemple un groupe de contenu thématique. Une section commence généralement avec un titre.
+						</li>
+
+						<!-- <pre> -->
+						<li>
+							La balise <code>&lt;pre&gt;</code> représente du <strong>texte préformaté</strong>, généralement écrit
+							avec une police à chasse fixe. Le texte est affiché tel quel, les espaces utilisés dans le document HTML seront retranscrits.
+						</li>
+
+						<!-- <code> -->
+						<li>
+							La balise <code>&lt;code&gt;</code> représente représente un <strong>fragment de code informatique</strong>.
+							Par défaut, cette balise utilise une police à chasse fixe afin d'afficher le texte contenu dans cet élément.
+						</li>
+
+						<!-- <img> -->
+						<li>
+							La balise <code>&lt;img&gt;</code> intègre une <strong>image quelconque dans le document</strong>.
+							L'image peut venir d'une source interne du site Web ou d'un site externe comme une image Google.
+						</li>
+
+						<!-- <textarea> -->
+						<li>
+							La balise <code>&lt;textarea&gt;</code> représente <strong>un champ de saisie</strong> qui permet d'éditer du texte sur plusieurs lignes.
+						</li>
+
+						<!-- <audio> -->
+						<li>
+							La balise <code>&lt;audio&gt;</code> utilisé afin d'intégrer un <strong>contenu sonore dans un document</strong>.
+							Il peut contenir une ou plusieurs sources audio représentées avec l'attribut <code>src</code> ou l'élément <code>&lt;source&gt;</code>.
+						</li>
+
+						<!-- <video> -->
+						<li>
+							La balise <code>&lt;video&gt;</code> intègre un <strong>contenu vidéo dans un document</strong>.
+							Le chemin vers le média à afficher est fourni via l'attribut <code>src</code> et on peut inclure d'autres attributs afin de spécifier la largeur et la hauteur,
+							la lecture automatique et/ou en boucle, les contrôles de lecture affichés, etc.
+						</li>
+					</ul>
+
+					<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html">
+						Cliquez ici pour voir plus d'informations sur ce sujet.
+					</a>
+				</article>
+
+				<!-- Exemples & Images -->
+				<article>
+					<h3 id="exemples">Exemples &amp; Images</h3>
+
+					Pour essayez, vous pouvez copier/coller ce code pour expérimenter certaines balises mentionnées ci-dessus.
+					<pre>
+&lt;!-- On signale que notre document utilise HTML 5 --&gt;
+&lt;!DOCTYPE html&gt;
+
+&lt;!-- On utilise la balise "html" pour commencer la structuration en précisant la langue du contenu --&gt;
+&lt;html lang="fr"&gt;
+
+	&lt;!-- DÉBUT DE L'EN-TÊTE DU DOCUMENT &gt;
+	&lt;head&gt;
+
+		&lt;!-- Le document est encodé en UTF-8 --&gt;
+		&lt;meta charset="utf-8"&gt;
+
+		&lt;!-- Le document a été créé par "Prénom Nom" --&gt;
+		&lt;meta name="Author" content="Prénom NOM /&gt;
+
+		&lt;!-- La description du document actuel. --&gt;
+		&lt;meta name="description" content="La description du document actuel."/&gt;
+
+		&lt;!-- Les mots-clés liés au contenu du document actuel. --&gt;
+		&lt;meta name="keywords" lang="fr" content="html, code, ..." /&gt;
+
+		&lt;!-- Le type de contrôle de l'indexation des pages (actuellement bloqué) --&gt;
+		&lt;meta name="robots" content="noindex" /&gt;
+
+		&lt;!-- Le titre du document HTML --&gt;
+		&lt;title&gt;Titre de la page&lt;/title&gt;
+
+		&lt;!-- Le document HTML nécessite une feuille de style CSS --&gt;
+		&lt;link rel="stylesheet" href="style.css" /&gt;
+
+		&lt;!-- Le document nécessite l'exécution de scripts client JS --&gt;
+		&lt;script src="script.js" /&gt;
+
+	&lt;!-- FIN DE L'EN-TÊTE DU DOCUMENT --&gt;
+	&lt;/head&gt;
+
+	&lt;!-- DÉBUT DU CORPS DU DOCUMENT --&gt;
+	&lt;body&gt;
+
+		&lt;!-- Cette balise sert essentiellement a présenter le contenu de la page actuelle --&gt;
+		&lt;header&gt;
+			&lt;h1&gt;En-tête de la page&lt;/h1&gt;
+
+			Cette page va traiter de ...
+		&lt;/header&gt;
+
+		&lt;!-- Cette balise va contenir les informations les plus importantes du document --&gt;
+		&lt;main&gt;
+			&lt;!-- Barre de navigation du document, on peut y mettre des boutons de redirection par exemple --&gt;
+			&lt;nav&gt;
+				&lt;h1&gt;Barre de navigation&lt;/h1&gt;
+
+				Boutons vers les différentes pages du sites...
+			&lt;/nav&gt;
+
+			&lt;!-- Ceci est la première section du document, on peut par exemple parler de la relation client/serveur --&gt;
+			&lt;section&gt;
+				&lt;h2&gt;Première section&lt;/h2&gt;
+
+				&lt;!-- Le premier article peut par exemple parler de la conception de client... --&gt;
+				&lt;article&gt;
+					&lt;h3&gt;Premier titre du premier article&lt;/h3&gt;
+
+					Description de l'article...
+				&lt;/article&gt;
+
+				&lt;!-- ... et le deuxième celui du serveur --&gt;
+				&lt;article&gt;
+					&lt;h3&gt;Deuxième titre du premier article&lt;/h3&gt;
+
+					Description de l'article...
+				&lt;/article&gt;
+			&lt;/section&gt;
+
+			&lt;!-- La deuxième section peut elle aborder un autre sujet comme les balises HTML --&gt;
+			&lt;section&gt;
+				&lt;h2&gt;Deuxième section&lt;/h2&gt;
+
+				&lt;article&gt;
+					&lt;h3&gt;Premier titre du deuxième article&lt;/h3&gt;
+
+					Description de l'article...
+				&lt;/article&gt;
+			&lt;/section&gt;
+
+			&lt;!-- Le pied de page regroupe toutes (ou la plupart) des informations concernant le site et/ou le document --&gt;
+			&lt;footer&gt;
+				&lt;h1&gt;Pied de page&lt;/h1&gt;
+
+				Quelques informations sur les contacts, etc...
+			&lt;/footer&gt;
+		&lt;/main&gt;
+
+	&lt;!-- FIN DU CORPS DU DOCUMENT --&gt;
+	&lt;/body&gt;
+
+&lt;!-- On clos la balise "html" pour signaler que la structure est terminé --&gt;
+&lt;/html&gt;
+					</pre>
+
+					<figure>
+						<img src="../images/exemple_balises_1.png" width="700" alt="Début du code HTML de cette page web."/>
+						<br />
+						<img src="../images/exemple_balises_2.png" width="700" alt="Début du code HTML de cette page web."/>
+						<figcaption>Images représentant les balises HTML mentionnées pour construire cette page web.</figcaption>
+					</figure>
+				</article>
+			</section>
+		</main>
+
+		<!-- Pied-de-page -->
+		<footer>
+			<hr />
+
+			<h2>Sources externes :</h2>
+			<ul>
+				<li><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Wikipédia FR</a></li>
+				<li><a href="https://openclassrooms.com/fr/">OpenClassRooms</a></li>
+				<li><a href="https://developer.mozilla.org/fr/">Site pour les développeurs de Mozilla</a></li>
+			</ul>
+
+			<hr />
+
+			<ul class="liste bloc">
+				<li><a href="#">Haut de la page</a></li>
+			</ul>
+
+			<p>
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+				</a>
+
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+				</a>
+			</p>
+
+			<em>Créé par Florian T.</em>
+		</footer>
+	</body>
+</html>
+
+<!-- https://validator.w3.org/ -->
+<!-- https://jigsaw.w3.org/css-validator/ -->

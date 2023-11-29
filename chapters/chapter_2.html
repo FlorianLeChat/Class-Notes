@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Author" content="Florian TRAYON" />
+		<meta name="description" content="Notes de cours de la LP IMApp."/>
+		<meta name="keywords" lang="fr" content="cours, html5, css3" />
+		<meta name="robots" content="noindex" />
+		<base target="_blank" />
+		<title>Chapitre 2</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- En-tête de la page -->
+		<header>
+			<a href="http://lp-imapp.unice.fr/">
+				<img src="../images/logo_imapp.png" alt="Logo de la formation"/>
+			</a>
+
+			<h1>~ Chapitre 2 ~</h1>
+			<p>
+				<em>Comment fonctionne un site internet ?</em>
+			</p>
+
+			<ul class="liste bloc">
+				<li><a href="chapter_1.html">Chapitre précédent.</a></li>
+				<li><a href="chapter_3.html">Chapitre suivant.</a></li>
+				<li><a href="../index.html">Retour vers la page d'accueil.</a></li>
+			</ul>
+
+			<hr/>
+		</header>
+
+		<main>
+			<!-- Sommaire -->
+			<nav>
+				<h2>Sommaire de la page</h2>
+				<ul>
+					<li><strong><a href="#notes">I</a>-</strong> <em>Notes du chapitre</em></li>
+					<li><strong><a href="#exemples">II</a>-</strong> <em>Exemples et images du chapitre</em></li>
+				</ul>
+			</nav>
+
+			<hr />
+
+			<!-- Cours -->
+			<section>
+				<h2>Cours</h2>
+
+				<!-- Notes -->
+				<article>
+					<h3 id="notes">Notes</h3>
+
+					<p>
+						Les ordinateurs qui se connectent au Web sont appelés des <em>clients</em> et des <em>serveurs</em>.
+						Les <strong>clients</strong> correspondent aux appareils des utilisateurs connectés sur Internet
+						(par exemple, votre ordinateur connecté par <a href="https://fr.wikipedia.org/wiki/Wi-Fi">Wi-Fi</a>
+						ou votre téléphone connecté sur le réseau mobile) et aux navigateurs web (comme par exemple, Firefox ou Chrome).
+						Les <strong>serveurs</strong> sont des ordinateurs (le plus souvent des serveurs dans des centre de données)
+						qui stockent des pages web, des sites ou des applications diverses et variées.
+						Lorsqu'un appareil <abbr>client</abbr> souhaite accéder à une page web,
+						une copie de la page est téléchargée depuis le serveur vers le client (sous la forme d'une chaîne de caractères),
+						la machine utilisée affiche alors le contenu dans le navigateur de l'utilisateur.
+					</p>
+
+					Lorsque vous saisissez une adresse web dans votre navigateur :
+					<ul>
+						<li>le navigateur demande au <a href="https://fr.wikipedia.org/wiki/Domain_Name_System">DNS</a>
+							<strong>l'adresse réelle</strong> du serveur contenant le site.
+						</li>
+						<li>le navigateur envoie une requête <a href="https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a>
+							au serveur pour lui demander d'envoyer une copie du site web au client.
+							Ce message, et les autres données envoyées entre le client et le serveur,
+							sont échangés par l'intermédiaire de la <strong>connexion internet</strong>.
+						</li>
+						<li>si le serveur accepte la requête émise par le client, le serveur envoie un message
+							<a href="https://fr.wikipedia.org/wiki/Liste_des_codes_HTTP">&laquo; 200 OK &raquo;</a> au client qui signifie :
+							<em>&laquo; Pas de problème, tu peux consulter ce site web, le voici &raquo;</em>.
+							Ensuite le serveur commence à envoyer les fichiers du site web au navigateur
+							sous forme d'une série de petits morceaux nommés <em>&laquo; paquet &raquo;</em>.
+						</li>
+						<li>le navigateur assemble les différents morceaux pour recomposer le site web en entier
+							puis l'affiche sur votre écran.
+						</li>
+					</ul>
+
+					<a href="https://apprendre-a-coder.com/comment-fonctionne-un-site-web/">
+						Cliquez ici pour voir plus d'informations sur ce sujet.
+					</a>
+				</article>
+
+				<!-- Exemples & Images -->
+				<article>
+					<h3 id="exemples">Exemples &amp; Images</h3>
+
+					<figure>
+						<img src="../images/fonctionnement_site_web.png" width="500" alt="Image représentant une communication client/serveur."/>
+						<figcaption>Image représentant une communication client/serveur pour un site Web.</figcaption>
+					</figure>
+				</article>
+			</section>
+		</main>
+
+		<!-- Pied-de-page -->
+		<footer>
+			<hr />
+
+			<h2>Sources externes :</h2>
+			<ul>
+				<li><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Wikipédia FR</a></li>
+				<li><a href="https://apprendre-a-coder.com/">Apprendre à coder</a></li>
+			</ul>
+
+			<hr />
+
+			<ul class="liste bloc">
+				<li><a href="#">Haut de la page</a></li>
+			</ul>
+
+			<p>
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+				</a>
+
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+				</a>
+			</p>
+
+			<em>Créé par Florian T.</em>
+		</footer>
+	</body>
+</html>
+
+<!-- https://validator.w3.org/ -->
+<!-- https://jigsaw.w3.org/css-validator/ -->

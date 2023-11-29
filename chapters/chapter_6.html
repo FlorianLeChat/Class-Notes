@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Author" content="Florian TRAYON" />
+		<meta name="description" content="Notes de cours de la LP IMApp."/>
+		<meta name="keywords" lang="fr" content="cours, html5, css3" />
+		<meta name="robots" content="noindex" />
+		<base target="_blank" />
+		<title>Chapitre 6</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- En-tête de la page -->
+		<header>
+			<a href="http://lp-imapp.unice.fr/">
+				<img src="../images/logo_imapp.png" alt="Logo de la formation"/>
+			</a>
+
+			<h1>~ Chapitre 6 ~</h1>
+			<p>
+				<em>Sélecteurs et combinateurs CSS.</em>
+			</p>
+
+			<ul class="liste bloc">
+				<li><a href="chapter_5.html">Chapitre précédent.</a></li>
+				<li><a href="../index.html">Retour vers la page d'accueil.</a></li>
+			</ul>
+
+			<hr/>
+		</header>
+
+		<main>
+			<!-- Sommaire -->
+			<nav>
+				<h2>Sommaire de la page</h2>
+				<ul>
+					<li><strong><a href="#notes">I</a>-</strong> <em>Notes du chapitre</em></li>
+					<li><strong><a href="#exemples">II</a>-</strong> <em>Exemples et images du chapitre</em></li>
+				</ul>
+			</nav>
+
+			<hr />
+
+			<!-- Cours -->
+			<section>
+				<h2>Cours</h2>
+
+				<!-- Notes -->
+				<article>
+					<h3 id="notes">Notes</h3>
+
+					<p>
+						Dans CSS, les sélecteurs sont utilisés pour cibler les <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">éléments HTML</a>
+						à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments.
+						<strong>Toute règle CSS commence par un sélecteur</strong>.
+						Un sélecteur est une <em>expression</em> qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante.
+						Le ou les éléments ciblés par le sélecteur sont le sujet de ce sélecteur.
+					</p>
+
+					<!-- Sélecteurs -->
+					<h4>Les sélecteurs</h4>
+
+					<ul>
+						<li>
+							<!-- Type -->
+							Les <strong>sélecteurs de type</strong> permettent de cibler les éléments qui correspondent au nom indiqué.<br />
+
+							<u>Exemple</u> : <code>input</code> permettra de cibler n'importe quel élément <code>&lt;input&gt;</code>.
+						</li>
+						<li>
+							<!-- Classe -->
+							Les <strong>sélecteurs de classe</strong> permettent de cibler les éléments en fonction de la valeur de leur attribut <code>class</code>.<br />
+
+							<u>Exemple</u> : <code>.index</code> permettra de cibler n'importe quel élément qui possède la classe <code>index</code>
+							(définie avec un attribut <code>class="index"</code>).
+						</li>
+						<li>
+							<!-- Identifiant -->
+							Les <strong>sélecteurs d'identifiant</strong> permettent de cibler un élément d'un document en fonction de la valeur de son attribut <code>id</code>.
+							Dans un document, il ne doit y avoir <strong>qu'un seul élément</strong> pour un identifiant donné.<br />
+
+							<u>Exemple</u> : <code>#test</code> permettra de cibler l'élément qui possède l'identifiant <code>test</code>
+							(définie avec un attribut <code>id="test"</code>).
+						</li>
+						<li>
+							<!-- Universel -->
+							Les <strong>sélecteurs universel</strong> permettent de cibler tous les nœuds d'un document.
+							Il existe également une variante pour ne cibler qu'un seul espace de noms et une variante pour cibler tous les espaces de noms.<br />
+
+							<u>Exemple</u> : <code>*</code> permettra de cibler tous les éléments du document.
+						</li>
+						<li>
+							<!-- Attribut -->
+							Les <strong>sélecteurs d'attribut</strong> permettent de cibler des éléments d'un document en fonction de la valeur d'un de leurs attributs.<br />
+
+							<u>Exemple</u> : <code>[id$="s"]</code> permettra de cibler tous les éléments qui possède un identifiant se finissant par la lettre &laquo; s &raquo;.
+						</li>
+					</ul>
+
+					<!-- Combinateurs -->
+					<h4>Les combinateurs</h4>
+
+					<ul>
+						<li>
+							<!-- Voisin direct -->
+							Les <strong>sélecteurs de voisin direct</strong> (<strong>combinateurs &laquo; + &raquo;</strong>) permettent de sélectionner les <em>nœuds</em> qui suivent <strong>immédiatement</strong> un élément donné.<br />
+
+							<u>Exemple</u> : <code>div + p</code> permettra de cibler n'importe quel élément <code>&lt;p&gt;</code> qui suit immédiatement un élément <code>&lt;div&gt;</code>.
+						</li>
+						<li>
+							<!-- Voisins -->
+							Les <strong>sélecteurs de voisins</strong> (<strong>combinateurs &laquo; ~ &raquo;</strong>) permettent de sélectionner les <em>nœuds</em> qui suivent un élément et qui ont le <strong>même parent</strong>.<br />
+
+							<u>Exemple</u> : <code>p ~ span</code> permettra de cibler les éléments <code>&lt;span&gt;</code> qui suivent (immédiatement ou non) un élément <code>&lt;p&gt;</code> et qui ont le même élément parent.
+						</li>
+						<li>
+							<!-- Enfants -->
+							Les <strong>sélecteurs d'éléments enfants</strong> (<strong>combinateurs &laquo; > &raquo;</strong>) permettent de sélectionner les <em>nœuds</em> qui sont des enfants <strong>directs</strong> d'un élément donné.<br />
+
+							<u>Exemple</u> : <code>ul > li</code> permettra de cibler tous les éléments <code>&lt;li&gt;</code> qui sont directement situés sous un élément <code>&lt;ul&gt;</code>.
+						</li>
+						<li>
+							<!-- Descendants -->
+							Les <strong>sélecteurs d'éléments descendants</strong> (<strong>combinateurs &laquo; (espace) &raquo;</strong>) permettent de sélectionner les <em>nœuds</em> qui sont des <strong>descendants</strong> (indirect ou non) d'un élément donné.<br />
+
+							<u>Exemple</u> : <code>div span</code> permettra de cibler n'importe quel élément <code>&lt;span&gt;</code> situé à l'intérieur d'un élément <code>&lt;div&gt;</code>.
+						</li>
+					</ul>
+
+					<!-- Pseudo-classes -->
+					<h4>Les pseudo-classes</h4>
+
+					Les <strong>pseudo-classes</strong> permettent de cibler des éléments selon une <strong>information d'état</strong> qui n'est pas stockée dans l'arbre du document.<br />
+					<u>Exemple</u> : <code>a:visited</code> permettra de cibler l'ensemble des éléments <code>&lt;a&gt;</code> (liens) ayant déjà été visités par l'utilisateur.
+
+					<!-- Pseudo-éléments -->
+					<h4>Les pseudo-classes</h4>
+
+					Les <strong>pseudo-éléments</strong> représentent des <em>entités</em> du document qui ne sont <strong>pas</strong> décrites en HTML.<br />
+					<u>Exemple</u> : <code>p::first-line</code> permettra de cibler la <strong>première ligne</strong> de chacun des éléments <code>&lt;p&gt;</code> (paragraphes) du document.<br /><br />
+
+					Cliquez ici pour voir plus d'informations sur les
+					<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1605060-mettez-en-place-le-css">
+						bases du CSS
+					</a>
+					et les
+					<a href="https://developer.mozilla.org/fr/docs/Web/CSS/CSS_Selectors">
+						sélecteurs.
+					</a>
+				</article>
+
+				<!-- Exemples & Images -->
+				<article>
+					<h3 id="exemples">Exemples &amp; Images</h3>
+
+					Pour essayez, vous pouvez copier/coller ce code pour expérimenter les sélecteurs CSS.<br />
+					(Vous devez néanmoins, créer par vous-même le HTML pour le tester, considérez cela comme un exercice).
+					<pre>
+/* Cible tous les éléments ayant la classe &laquo; test &raquo;. */
+.test
+{
+	margin: 2em;
+}
+
+/* Cible tous les éléments &lt;a&gt;. */
+a
+{
+	color: red;
+}
+
+/* Les éléments &lt;a&gt; avec un attribut title. */
+a[title]
+{
+	color: purple;
+}
+
+/* Ne cible que les paragraphes situé directement après une image. */
+img + p
+{
+ 	font-style: bold;
+}
+
+/* Parmi tous les éléments &lt;img&gt;, cible tous éléments &lt;p&gt; qui les suivent. */
+img ~ p
+{
+	color: red;
+}
+
+/* L'élément avec l'identifiant id="demo" */
+#demo
+{
+	border: red 2px solid;
+}
+
+/* La première ligne de chaque élément &lt;p&gt;. */
+p::first-line
+{
+	color: blue;
+	text-transform: uppercase;
+}
+					</pre>
+
+					<figure>
+						<img src="../images/exemple_selecteurs_1.png" width="300" alt="Exemple numéro 1 des sélecteurs CSS."/>
+						<br />
+						<img src="../images/exemple_selecteurs_2.png" width="300" alt="Exemple numéro 2 des sélecteurs CSS."/>
+						<br />
+						<img src="../images/exemple_selecteurs_3.png" width="300" alt="Exemple numéro 3 des sélecteurs CSS."/>
+						<figcaption>Images représentant des exemples de sélecteurs et de combinateurs CSS pour construire cette page HTML.</figcaption>
+					</figure>
+				</article>
+			</section>
+		</main>
+
+		<!-- Pied-de-page -->
+		<footer>
+			<hr />
+
+			<h2>Sources externes :</h2>
+			<ul>
+				<li><a href="https://openclassrooms.com/fr/">OpenClassRooms</a></li>
+				<li><a href="https://www.pierre-giraud.com/liste-selecteurs-css-utilisation/">Blog de Pierre Giraud</a></li>
+			</ul>
+
+			<hr />
+
+			<ul class="liste bloc">
+				<li><a href="#">Haut de la page</a></li>
+			</ul>
+
+			<p>
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+				</a>
+
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+				</a>
+			</p>
+
+			<em>Créé par Florian T.</em>
+		</footer>
+	</body>
+</html>
+
+<!-- https://validator.w3.org/ -->
+<!-- https://jigsaw.w3.org/css-validator/ -->

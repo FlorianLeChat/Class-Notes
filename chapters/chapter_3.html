@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Author" content="Florian TRAYON" />
+		<meta name="description" content="Notes de cours de la LP IMApp."/>
+		<meta name="keywords" lang="fr" content="cours, html5, css3" />
+		<meta name="robots" content="noindex" />
+		<base target="_blank" />
+		<title>Chapitre 3</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- En-tête de la page -->
+		<header>
+			<a href="http://lp-imapp.unice.fr/">
+				<img src="../images/logo_imapp.png" alt="Logo de la formation"/>
+			</a>
+
+			<h1>~ Chapitre 3 ~</h1>
+			<p>
+				<em>Introduction au HTML.</em>
+			</p>
+
+			<ul class="liste bloc">
+				<li><a href="chapter_2.html">Chapitre précédent.</a></li>
+				<li><a href="chapter_4.html">Chapitre suivant.</a></li>
+				<li><a href="../index.html">Retour vers la page d'accueil.</a></li>
+			</ul>
+
+			<hr/>
+		</header>
+
+		<main>
+			<!-- Sommaire -->
+			<nav>
+				<h2>Sommaire de la page</h2>
+				<ul>
+					<li><strong><a href="#notes">I</a>-</strong> <em>Notes du chapitre</em></li>
+					<li><strong><a href="#exemples">II</a>-</strong> <em>Exemples et images du chapitre</em></li>
+				</ul>
+			</nav>
+
+			<hr />
+
+			<!-- Cours -->
+			<section>
+				<h2>Cours</h2>
+
+				<!-- Notes -->
+				<article>
+					<h3 id="notes">Notes</h3>
+
+					<p>
+						HTML (<em>Hyper Text Markup Language</em>) est un langage de balisage hypertexte, qui est utilisé pour créer les pages web.
+						Il est composé des éléments sémantiques et structurels, qui définissent comment des parties du document
+						(les titres, les paragraphes, les listes, les images etc.) doivent être présentées dans le navigateur.
+					</p>
+
+					<p>
+						L'unité structurelle de base d'une page Web est un élément HTML, pour la définition de lequel on utilise les <strong>balises HTML</strong>.
+						Les balises HTML sont utilisés pour <em>définir les structures du contenu sur la page Web</em>.
+						À l'aide de balises, nous marquons le contenu et faisons comprendre au navigateur comment afficher quelque partie du contenu
+						(par exemple, texte, image, lien hypertexte, etc.). Les balises ne sont cependant pas affichées dans le navigateur.
+						Les balises HTML sont placées entre crochets angulaires <code>&lt;balise&gt;</code>, par exemple <code>&lt;html&gt;</code>.
+						La plupart des balises HTML sont appariées (par exemple, <code>&lt;p&gt; &lt;/p&gt;</code>),
+						c’est-à-dire, il sont composés des deux parties : le tag d’ouverture (<code>&lt;p&gt;</code>) et le tag de fermeture (<code>&lt;/p&gt;</code>).
+						Les balises seules n’ont pas de tag de fermeture. Par exemple, le tag <code>&lt;img&gt;</code> est seul,
+						qui est utilisé pour spécifier des images.
+					</p>
+
+					<p>
+						L'élément <code>&lt;!DOCTYPE&gt;</code> indique que le document actuel appartient à un type spécifique de HTML.
+						Il existe <a href="https://fr.wikipedia.org/wiki/HTML5#Changements_par_rapport_%C3%A0_HTML_4.X_et_XHTML_1.X">
+						plusieurs versions de HTML</a>, et pour que le navigateur ne soit pas confus et affiche le bon standard, il doit le spécifier.
+						Il existe plusieurs types de <em>&laquo; DOCTYPE &raquo;</em>, pour chaque version du langage HTML existe le sien.
+						Voici un tableau récapitulant les versions HTML utilisées par le développeur ou non :
+					</p>
+
+					<table>
+						<tr>
+							<td><strong>Versions HTML</strong></td>
+							<td><strong>Utilisé ?</strong></td>
+						</tr>
+						<tr>
+							<td><em>XHTML 1.X</em></td>
+							<td>&#10060;</td>
+						</tr>
+						<tr>
+							<td><em>HTML 4</em></td>
+							<td>&#10060;</td>
+						</tr>
+						<tr>
+							<td><em>HTML 5</em></td>
+							<td>&#9989;</td>
+						</tr>
+					</table>
+
+					<br />
+
+					<a href="https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML">
+						Cliquez ici pour voir plus d'informations sur ce sujet.
+					</a>
+				</article>
+
+				<!-- Exemples & Images -->
+				<article>
+					<h3 id="exemples">Exemples &amp; Images</h3>
+
+					<figure>
+						<img src="../images/exemple_html.png" width="500" alt="Code de base pour afficher une page web vide."/>
+						<figcaption>Image représentant le code nécessaire de base pour afficher une page web vierge.</figcaption>
+					</figure>
+				</article>
+			</section>
+		</main>
+
+		<!-- Pied-de-page -->
+		<footer>
+			<hr />
+
+			<h2>Sources externes :</h2>
+			<ul>
+				<li><a href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Wikipédia FR</a></li>
+				<li><a href="https://developer.mozilla.org/fr/">Site pour les développeurs de Mozilla</a></li>
+			</ul>
+
+			<hr />
+
+			<ul class="liste bloc">
+				<li><a href="#">Haut de la page</a></li>
+			</ul>
+
+			<p>
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+				</a>
+
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+				</a>
+			</p>
+
+			<em>Créé par Florian T.</em>
+		</footer>
+	</body>
+</html>
+
+<!-- https://validator.w3.org/ -->
+<!-- https://jigsaw.w3.org/css-validator/ -->

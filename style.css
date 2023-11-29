@@ -1,0 +1,206 @@
+/* Page entière */
+html
+{
+	background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+body
+{
+	margin: 50px 100px 50px 100px;
+	font-family: "Roboto", "Open Sans";
+}
+
+/* Titres */
+h1
+{
+	color: red;
+	font-size: 35px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-decoration: underline;
+}
+
+h2
+{
+	color: orange;
+	font-size: 30px;
+	text-decoration: overline;
+}
+
+main > nav > h2
+{
+	margin-left: 20px;
+}
+
+h3, h4
+{
+	color: royalblue;
+	transition: background-color 1s;
+	text-decoration: overline;
+	transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+}
+
+h3:hover, h4:hover
+{
+	background-color: yellow;
+}
+
+h3:active, h4:active
+{
+	font-size: 130%;
+}
+
+/* Paragraphes et textes */
+p
+{
+	color: black;
+	font-size: 15px;
+	text-align: justify;
+	font-family: "Courier New", "Open Sans";
+	line-height: 20px;
+	text-indent: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+strong
+{
+	font-weight: 600;
+}
+
+section p::first-letter
+{
+	font-size: 115%;
+	font-family: "Times New Roman", "Open Sans";
+}
+
+code
+{
+	font-size: 12.5px;
+	background-color: beige;
+}
+
+/* Tableaux */
+table, td
+{
+	color: sienna;
+	border: 1px solid black;
+	padding: 5px;
+	font-size: 20px;
+	border-collapse: separate;
+}
+
+/* Listes */
+ol
+{
+	border: groove yellow;
+	font-size: 20px;
+}
+
+ol li
+{
+	padding-left: 5px;
+}
+
+article > ul li
+{
+	padding-bottom: 10px;
+}
+
+/* Liens */
+a
+{
+	color: crimson;
+	text-decoration: none;
+}
+
+a:visited
+{
+	color: red;
+}
+
+a:active
+{
+	color: yellow;
+	font-size: 120%;
+	background-color: red;
+}
+
+a[href="https://jigsaw.w3.org/css-validator/check/referer"] > img
+{
+	/* NB: Les dimensions du logo de validation CSS sont ridicules. */
+	width: 88px;
+	height: 31px;
+	border: 0px
+}
+
+/* Images */
+img
+{
+	filter: blur(1px);
+	transition: filter 500ms;
+	transition-timing-function: ease-out;
+}
+
+img:hover
+{
+	filter: blur(0px);
+}
+
+/* Élements de navigation */
+nav
+{
+	color: limegreen;
+	border: dashed purple;
+	padding: 20px;
+	font-size: 20px;
+}
+
+/* Menu déroulant « personnalisé » */
+.liste
+{
+	margin: 0;
+	font-size: 20px;
+	margin-right: 70%;
+	list-style-type: none;
+}
+
+ul.liste, .liste li
+{
+	padding: 10px 10px 10px 10px;
+}
+
+.bloc li
+{
+	color: black;
+	border-left: 0.5em solid;
+	padding-left: 1em;
+	background-color: white;
+}
+
+.bloc li:nth-child(1)
+{
+	border-color: red;
+}
+
+.bloc li:nth-child(2)
+{
+	border-color: green;
+}
+
+.bloc li:nth-child(3)
+{
+	border-color: blue;
+}
+
+.bloc li:hover
+{
+	color: black;
+	background-color: whitesmoke;
+	border-left-color: orange;
+}
+
+.bloc li:active
+{
+	font-size: 130%;
+}

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="Author" content="Florian TRAYON" />
+		<meta name="description" content="Notes de cours de la LP IMApp."/>
+		<meta name="keywords" lang="fr" content="cours, html5, css3" />
+		<meta name="robots" content="noindex" />
+		<base target="_blank" />
+		<title>Chapitre 5</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link href="../favicon.ico" rel="icon" type="image/x-icon" />
+	</head>
+	<body>
+		<!-- En-tête de la page -->
+		<header>
+			<a href="http://lp-imapp.unice.fr/">
+				<img src="../images/logo_imapp.png" alt="Logo de la formation"/>
+			</a>
+
+			<h1>~ Chapitre 5 ~</h1>
+			<p>
+				<em>Formulaires et tableaux.</em>
+			</p>
+
+			<ul class="liste bloc">
+				<li><a href="chapter_4.html">Chapitre précédent.</a></li>
+				<li><a href="chapter_6.html">Chapitre suivant.</a></li>
+				<li><a href="../index.html">Retour vers la page d'accueil.</a></li>
+			</ul>
+
+			<hr/>
+		</header>
+
+		<main>
+			<!-- Sommaire -->
+			<nav>
+				<h2>Sommaire de la page</h2>
+				<ul>
+					<li><strong><a href="#notes">I</a>-</strong> <em>Notes du chapitre</em></li>
+					<li><strong><a href="#exemples">II</a>-</strong> <em>Exemples et images du chapitre</em></li>
+				</ul>
+			</nav>
+
+			<hr />
+
+			<!-- Cours -->
+			<section>
+				<h2>Cours</h2>
+
+				<!-- Notes -->
+				<article>
+					<h3 id="notes">Notes</h3>
+
+					<p>
+						Les formulaires HTML sont <strong>un des principaux moyens d'interaction entre un utilisateur et un site web</strong>.
+						Ils permettent à l'utilisateur d'envoyer des données au site web.
+						La plupart du temps, ces données sont envoyées à des serveurs web mais la page peut aussi les intercepter et les utiliser elle-même.
+						Un formulaire HTML est composé d'un ou plusieurs <em>&laquo; widgets &raquo;</em>.
+						Ceux-ci peuvent être des zones de texte (sur une seule ligne ou plusieurs lignes),
+						<a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Button">des boîtes à sélection, des boutons,
+						des cases à cocher ou des boutons radio</a>. La plupart du temps, ces items sont associés à un texte qui décrit leur rôle.
+					</p>
+
+					<p>
+						Un tableau est un <strong>ensemble structuré de données</strong> (<em>table de données</em>) présentées en lignes et colonnes.
+						Un tableau vous permet de retrouver rapidement et facilement des valeurs au croisement entre différents types de données.
+						L'avantage du tableau tient dans sa <strong>rigueur</strong>.
+						L'information est facilement interprétée par des éléments visuels entre les en‑têtes de lignes et colonnes.
+					</p>
+
+					Cliquez ici pour voir plus d'informations sur les
+					<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1608357-memento-des-balises-html">
+						formulaires
+					</a>
+					et les
+					<a href="https://openclassrooms.com/fr/courses/1603881-apprenez-a-creer-votre-site-web-avec-html5-et-css3/1606851-ajoutez-des-tableaux">
+						tableaux.
+					</a>
+				</article>
+
+				<!-- Exemples & Images -->
+				<article>
+					<h3 id="exemples">Exemples &amp; Images</h3>
+
+					Pour essayez, vous pouvez copier/coller ce code pour expérimenter les tableaux et les formulaires.<br />
+					(Vous devez néanmoins, récupérer la base HTML dans le précédent chapitre pour vous exercer un peu).
+					<pre>
+&lt;!-- On créé un tableau HTML avec des attributs CSS pour modifier légèrement son apparence --&gt;
+&lt;table style="border-collapse: collapse; border: 1px solid black;"&gt;
+
+	&lt;!-- On créé une entrée dans le tableau (ce qui veut dire une colonne et une ligne) --&gt;
+	&lt;tr&gt;
+
+		&lt;!-- Contenu de l'entrée numéro 1 --&gt;
+		&lt;td&gt;Entrée 1A&lt;/td&gt;
+
+		&lt;!-- Contenu de l'entrée numéro 2 --&gt;
+		&lt;td&gt;Entrée 1B&lt;/td&gt;
+
+	&lt;/tr&gt;
+
+	&lt;!-- Deuxième entrée --&gt;
+	&lt;tr&gt;
+
+		&lt;td&gt;Texte&lt;/td&gt;
+
+		&lt;!-- Cette case sera encadrée en rouge pour attirer l'attention de l'utilisateur --&gt;
+		&lt;td style="border: 1px solid red;"&gt;Mot encadré en rouge avec du CSS&lt;/td&gt;
+
+	&lt;/tr&gt;
+
+	&lt;!-- Troisième entrée --&gt;
+	&lt;tr&gt;
+
+		&lt;td&gt;HTML&lt;/td&gt;
+		&lt;td&gt;PHP&lt;/td&gt;
+
+	&lt;/tr&gt;
+
+&lt;!-- Fin du tableau --&gt;
+&lt;/table&gt;
+
+&lt;!-- On créé un formulaire en spécifiant le fichier cible et la méthode d'envoi des données --&gt;
+&lt;form action="file.php" method="GET"&gt;
+
+	&lt;!-- Il est possible d'insérer du texte pour décrire ce qu'on attend de l'utilisateur --&gt;
+	Que font 8 + 18 ?
+
+	&lt;!-- On peut insérer un champ de saisie pour que l'utilisateur puisse envoyer quelque chose --&gt;
+	&lt;input type="text" name="result" /&gt;
+
+	&lt;br /&gt;&lt;br /&gt;
+
+	&lt;!-- Après que les éléments ont été créés, alors on affiche un bouton pour valider les données --&gt;
+	&lt;input type="submit" value="Envoyer"&gt;
+
+	&lt;!-- Il est possible d'envoyer des valeurs cachées côté serveur (notamment utile pour récupérer certaines informations du client) --&gt;
+	&lt;input type="hidden" name="hiddenValue1" value="Test1"&gt;
+	&lt;input type="hidden" name="hiddenValue2" value="Test2"&gt;
+
+&lt;/form&gt;
+					</pre>
+
+					<figure>
+						<img src="../images/exemple_tableau.png" width="300" alt="Tableau à plusieurs entrées."/>
+						<br />
+						<img src="../images/exemple_formulaire.png" width="300" alt="Formulaire avec interaction PHP."/>
+						<figcaption>Images représentant un exemple de tableau à plusieurs entrées et un formulaire avec interaction PHP.</figcaption>
+					</figure>
+				</article>
+			</section>
+		</main>
+
+		<!-- Pied-de-page -->
+		<footer>
+			<hr />
+
+			<h2>Sources externes :</h2>
+			<ul>
+				<li><a href="https://openclassrooms.com/fr/">OpenClassRooms</a></li>
+				<li><a href="https://developer.mozilla.org/fr/">Site pour les développeurs de Mozilla</a></li>
+			</ul>
+
+			<hr />
+
+			<ul class="liste bloc">
+				<li><a href="#">Haut de la page</a></li>
+			</ul>
+
+			<p>
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valide !" />
+				</a>
+
+				<a href="https://jigsaw.w3.org/css-validator/check/referer">
+					<img src="https://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+				</a>
+			</p>
+
+			<em>Créé par Florian T.</em>
+		</footer>
+	</body>
+</html>
+
+<!-- https://validator.w3.org/ -->
+<!-- https://jigsaw.w3.org/css-validator/ -->
